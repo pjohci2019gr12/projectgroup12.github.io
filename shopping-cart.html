@@ -1,376 +1,217 @@
 <!DOCTYPE html>
-<html><head>
-<style>
-html {
-  background: #bbc3c6;
-  font: 62.5%/1.5em "Trebuchet Ms", helvetica;
-}
-
-* {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
-
-@font-face {
-    font-family: 'Shopper';
-    src: url('http://www.shopperfont.com/font/Shopper-Std.ttf');
-}
-
-.shopper {
-  text-transform: lowercase;
-  font: 2em 'Shopper', sans-serif;
-  line-height: 0.5em;
-  display: inline-block;
-}
-
-
-
-h1 {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 2.5em;
-}
-
-p {
-  font-size: 1.5em;
-  color: #8a8a8a;
-}
-
-input {
-  border: 0.3em solid #bbc3c6;
-  padding: 0.5em 0.3em; 
-  font-size: 1.4em;
-  color: #8a8a8a;
-  text-align: center;
-}
-
-img {
-  max-width: 9em;
-  width: 100%;
-  overflow: hidden; 
-  margin-right: 1em;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  max-width: 75em;
-  width: 95%;
-  margin: 40px auto;  
-  overflow: hidden;
-  position: relative;
-  
-  border-radius: 0.6em;
-  background: #ecf0f1;
-  box-shadow: 0 0.5em 0 rgba(138, 148, 152, 0.2);
-}
-
-.heading {
-  padding: 1em;
-  position: relative;
-  z-index: 1;
-  color: #f7f7f7;
-  background: purple;
-}
-
-.cart {
-  margin: 2.5em;
-  overflow: hidden;
-}
-
-.cart.is-closed {
-  height: 0;
-  margin-top: -2.5em;
-}
-
-.table {
-  background: #ffffff;
-  border-radius: 0.6em;
-  overflow: hidden;
-  clear: both;
-  margin-bottom: 1.8em;
-}
-
-
-.layout-inline > * {
-  display: inline-block;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.th {
-  background: purple;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.5em;
-}
-
-.tf {
-  background: purple;
-  text-transform: uppercase;
-  text-align: right;
-  font-size: 1.2em;  
-}
-
-.tf p {
-  color: #fff;
-  font-weight: bold;
-}
-
-.col {
-  padding: 1em;
-  width: 12%;
-}
-
-.col-pro {
-  width: 44%;
-}
-
-.col-pro > * {
-  vertical-align: middle;
-}
-
-.col-qty {
-  text-align: center;
-  width: 17%;
-}
-
-.col-numeric p {
-  font: bold 1.8em helvetica;
-}
-
-.col-total p {
-  color: #12c8b1;
-}
-
-.tf .col {
-  width: 20%;
-}
-
-.row > div {
-  vertical-align: middle;
-}
-
-.row-bg2 {
-  background: #f7f7f7;
-}
-
-.visibility-cart {
-  position: absolute;
-  color: #fff;
-  top: 0.5em;
-  right: 0.5em;
-  font:  bold 2em arial;
-  border: 0.16em solid #fff;
-  border-radius: 2.5em;
-  padding: 0 0.22em 0 0.25em ;
-}
-
-.col-qty > * {
-  vertical-align: middle; 
-}
-
-.col-qty > input {
-  max-width: 2.6em;
-}
-
-
-a.qty {
-  width: 1em;
-  line-height: 1em;
-  border-radius: 2em;
-  font-size: 2.5em;
-  font-weight: bold;
-  text-align: center;
-  background: #43ace3;  
-  color: #fff;
-}
-
-a.qty:hover {
-  background: #3b9ac6;
-}
-
-.btn {
-  padding: 10px 30px;
-  border-radius: 0.3em;
-  font-size: 1.4em;
-  font-weight: bold;
-  background: #43ace3;
-  color: #fff;
-  box-shadow: 0 3px 0 rgba(59,154,198, 1)
-}
-
-.btn:hover {
-  box-shadow: 0 3px 0 rgba(59,154,198, 0)
-}
-
-.btn-update {
-  float: right;
-  margin: 0 0 1.5em 0;
-}
-
-.transition {
-  transition: all 0.3s ease-in-out;
-}
-
-@media screen and ( max-width: 755px) {
-  .container {
-    width: 98%;
-  }
-  
-  .col-pro {
-    width: 35%;
-  }
-  
-  .col-qty {
-    width: 22%;
-  }
-  
-  img {
-    max-width: 100%;
-    margin-bottom: 1em;
-  }
-}
-
-@media screen and ( max-width: 591px) {
-  
-}
-</style>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        PetHub Store
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/gamehublogo.png"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/header.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/cart-form.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/footer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/burger-menu.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/search-bar.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/slideshow.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/sticky.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/common-style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/menu-bar.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../script/burger-menu.js"></script>
+    <script src="../script/slideshow.js"></script>
+    <script src="../script/product-tab.js"></script>
+    <script src="../script/menu-bar.js"></script>
+    <script src="../script/cart-description.js"></script>
+    <script src="../script/login.js"></script>
+    <script src="script/remove.js"></script>
 </head>
-<body>
-<div class="container">
-  <div class="heading">
-    <h1>
-      <span class="shopper">s</span> Shopping Cart
-    </h1>
-    
-    <a href="#" class="visibility-cart transition is-open">X</a>    
-  </div>
-  
-  <div class="cart transition is-open">
-    
-    <a href="#" class="btn btn-update">Update cart</a>
-    
-    
-    <div class="table">
-      
-      <div class="layout-inline row th">
-        <div class="col col-pro">Product</div>
-        <div class="col col-price align-center "> 
-          Price
-        </div>
-        <div class="col col-qty align-center">QTY</div>
-        <div class="col">VAT</div>
-        <div class="col">Total</div>
-      </div>
-      
-      <div class="layout-inline row">
-        
-        <div class="col col-pro layout-inline">
-          <img src="https://shopthoitrangpet.tk/imgaesss/143.jpg" alt="kitten" />
-          <p>Auto Chain v2</p>
-        </div>
-        
-        <div class="col col-price col-numeric align-center ">
-          <p>£59.99</p>
+
+<body>839b7656d50ba1e57
+    <!--Header--> 
+    <header class="sticky">
+        <!--Header Menu-->
+        <div class="header-menu">
+            <a id="category" class="pretty-anchor">Category</a>
+            <div class="sub-menu">
+                <a href="../category/Steam.html" class="pretty-anchor">Steam Games</a>
+                <a href="../category/Origin.html" class="pretty-anchor">Origin Games</a>
+                <a href="../category/Battle.net.html" class="pretty-anchor">Battle.net Games</a>
+            </div>
+            <a href="../product/Insurgency.html" class="pretty-anchor">Daily Deals</a>
+            <a href="../feedback/feed-back.html" class="pretty-anchor">Feedback</a>
+            <a id="login-btn" class="purple-btn" href="../account/user-login.html">Login</a>
         </div>
 
-        <div class="col col-qty layout-inline">
-          <a href="#" class="qty qty-minus">-</a>
-            <input type="numeric" value="3" />
-          <a href="#" class="qty qty-plus">+</a>
-        </div>
-        
-        <div class="col col-vat col-numeric">
-          <p>£2.95</p>
-        </div>
-        <div class="col col-total col-numeric">               <p> £182.95</p>
-        </div>
-      </div>
-      
-      <div class="layout-inline row row-bg2">
+        <!--Burger Menu Icon-->
+        <div class="burger-menu-icon">
+            <div class="burger"></div>  
+          </div>
 
-        <div class="col col-pro layout-inline">
-          <img src="https://shopthoitrangpet.tk/imgaesss/141.jpg" alt="kitten" />
-          <p>Sunglass</p>
-        </div>
-        
-        <div class="col col-price col-numeric align-center ">
-          <p>£23.99</p>
+        <!--Website Logo-->
+        <div class="logo">
+            <a href="../index.html"><img id="logo-img" src="../images/pethub.jpg" alt="GameHub Logo"></a>
         </div>
 
-        <div class="col col-qty  layout-inline">
-          <a href="#" class="qty qty-minus ">-</a>
-            <input type="numeric" value="1" />
-          <a href="#" class="qty qty-plus">+</a>
-        </div>
-        
-        <div class="col col-vat col-numeric">
-          <p>£1.95</p>
-        </div>
-        <div class="col col-total col-numeric">
-          <p>£25.94</p>
-        </div>      
-      
-      </div>
-      
-       <div class="layout-inline row">
-        
-        <div class="col col-pro layout-inline">
-          <img src="https://shopthoitrangpet.tk/imgaesss/144.jpg" alt="kitten" />
-          <p>Auto Chain v1</p>
-        </div>
-        
-        <div class="col col-price col-numeric align-center ">
-          <p>£59.99</p>
+        <!--Shopping Cart Icon-->
+        <a class="cart-icon pretty-anchor" href="../shopping-cart/shopping-cart.html">
+            <div><i class="fa fa-shopping-cart"></i></div>
+        </a>
+
+        <!--Search Bar-->
+        <div class="search-bar-wrapper">
+            <div class="search-bar">
+                <input type="text" class="search-term" placeholder="What are you looking for?">
+                <button type="submit" class="search-btn purple-btn"><i class="fa fa-search"></i></button>  
+            </div>
         </div>
 
-        <div class="col col-qty layout-inline">
-          <a href="#" class="qty qty-minus">-</a>
-            <input type="numeric" value="3" />
-          <a href="#" class="qty qty-plus">+</a>
-        </div>
-        
-        <div class="col col-vat col-numeric">
-          <p>£2.95</p>          
-        </div>
-         <div class="col col-total col-numeric">  
-           <p>£182.95</p>
-         </div>         
-      </div>
-  
-       <div class="tf">
-         <div class="row layout-inline">
-           <div class="col">
-             <p>VAT</p>
-           </div>
-           <div class="col"></div>
-         </div>
-         <div class="row layout-inline">
-           <div class="col">
-             <p>Shipping</p>
-           </div>
-           <div class="col"></div>
-         </div>
-          <div class="row layout-inline">
-           <div class="col">
-             <p>Total</p>
-           </div>
-           <div class="col"></div>
-         </div>
-       </div>         
-  </div>
-    
-    <a href="#" class="btn btn-update">Update cart</a>
-  
-</div>
-  
+        <!--Login Button (Desktop)-->
+        <a class="login-wrapper pretty-anchor" href="../account/user-login.html">
+            <div class="login-btn"><i class="fa fa-user"></i> sign in</div>
+        </a>
+    </header>
 
+    <!--Menu Bar (Desktop)-->
+    <div class="menu-bar sticky">
+           <a href="../category/pa.html" class="pretty-anchor">Pet Accessories</a>
+        <a href="../category/pa.html" class="pretty-anchor">Pet Clothes</a>
+        <a href="../category/pa.html" class="pretty-anchor">Pet Food</a>
+    </div>
+
+    <div class="body">
+        <div class="your-cart">
+                <img src="https://mbtskoudsalg.com/images/shop-button-png-4.png">  
+                Shopping cart
+        </div>
+        <div class="products_wrapper">
+            <div class="products">
+                <div class="picture"><img src="../Image project/Cleaning items/3.png"></div>
+                <div class="information">
+                  <div class=product-name>Snappy Tom</div>  
+                  
+                    <div class=product-price>$19.50</div>
+                    <div class=product-quantity>Quantity:
+                            <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                  </select>
+                    </div>
+                    <a href="#" class="remove-btn" >Remove</a>
+                 </div>
+            </div>
+            <div class="products">
+                    <div class="picture"><img src="../Image project/Dog Bowls/4.png"></div>
+                    <div class="information">
+                      <div class=product-name>Heart-Bowl</div>  
+                      
+                        <div class=product-price>$16.00</div>
+                        <div class=product-quantity>Quantity:
+                                <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                      </select>
+                        </div>
+                        <a href="#" class="remove-btn" >Remove</a>
+                     </div>
+                </div>
+                <div class="products">
+                    <div class="picture"><img src="../Image project/Health Care/1.jpg"></div>
+                    <div class="information">
+                      <div class=product-name>PetNaturals </div>  
+                      
+                        <div class=product-price>$16.99</div>
+                        <div class=product-quantity>Quantity:
+                                <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                      </select>
+                        </div>
+                        <a href="#" class="remove-btn" >Remove</a>
+                     </div>
+                </div>
+            </div>
+        
+            <div class="summary">
+                <div class="subtotal">
+                    <div class="subtotal-left">Subtotal</div>
+                    <div class="subtotal-right">$52.49</div>
+                </div>
+                <div class="discount">
+                    <div class="discount-left">Discount &#9660;</div>
+                    <div class="discount-right"> <a>Do you have any promotion code ? </a> </div>
+                    <div class="description">
+                        <form> 
+                            <input id="discount-text" type="text">
+                            <button type="button" id="discount-button" >Enter</button>
+                            <div class="pull-right"> 15% </div>   
+                        </form>                     
+                    </div>                     
+                </div>
+            <div class="total">
+                <div class="total-left">Total</div>
+                <div class="total-right">$52.49</div>
+            </div>
+            <div class="checkout">
+                <button class="checkout-button">Go to checkout</button>  
+            </div>
+
+        </div>         
+    </div>
+       
+    <!--Footer-->
+    <footer>
+        <!--Payment Logo-->
+        <div id="payment-logo">
+            <i class="fa fa-credit-card-alt"></i>
+            <i class="fa fa-cc-visa"></i>
+            <i class="fa fa-cc-mastercard"></i>
+            <i class="fa fa-cc-paypal"></i>
+        </div>
+
+        <!--Footer Menu-->
+        <div id="footer-menu">
+            <a class="footer-option" href="../about_us/about_us.html">About Us</a>
+            <a class="footer-option" href="../page-not-found.html">Support Center</a>
+            <a class="footer-option" href="../page-not-found.html">Terms of Use</a>
+            <a class="footer-option" href="../page-not-found.html">Privacy Policy</a>
+            <a class="footer-option" href="../account/admin-login.html">Administrator</a>
+        </div>
+
+        <!--Social Media Icon-->
+        <div id="social-media">
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.google.com/"><i class="fa fa-google"></i></a>
+            <a href="https://www.github.com/"><i class="fa fa-github"></i></a>
+        </div>
+
+        <!--Copyright Information-->
+        <div id="copyright">
+            <p>Designed by Phan Dũng Trí, Nguyễn Quốc Vũ, Nguyễn Đức Anh Tuấn</p>
+        </div>
+    </footer>
 </body>
+
 </html>
